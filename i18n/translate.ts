@@ -1,5 +1,5 @@
 import type { TOptions } from 'i18next';
-import i18n from 'i18next';
+import i18n, { t } from 'i18next';
 
 import { TxKeyPath } from '.';
 
@@ -27,7 +27,7 @@ import { TxKeyPath } from '.';
  */
 export function translate(key: TxKeyPath, options?: TOptions): string {
   if (i18n.isInitialized) {
-    return i18n.t(key, options);
+    return t(key, options);
   }
   return key;
 }
