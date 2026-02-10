@@ -1,4 +1,6 @@
-import { Text, View } from 'react-native';
+import { Button } from '@/components/Button/Button';
+import { Text } from '@/components/Text/Text';
+import { View } from 'react-native';
 
 export default function Index() {
   return (
@@ -8,7 +10,8 @@ export default function Index() {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text text="Edit app/index.tsx to edit this screen." />
+      <Button text="test" />
     </View>
   );
 }

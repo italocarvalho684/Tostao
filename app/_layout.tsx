@@ -3,7 +3,7 @@ import { ThemeProvider } from '@/theme/context';
 import { customFontsToLoad } from '@/theme/typography';
 import { loadDateFnsLocale } from '@/utils/formatDate';
 import { useFonts } from '@expo-google-fonts/space-grotesk';
-import { SplashScreen, Stack } from 'expo-router';
+import { Slot, SplashScreen } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -34,7 +34,7 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <ThemeProvider>
-        <Stack />
+        <Slot />
       </ThemeProvider>
     </SafeAreaProvider>
   );
